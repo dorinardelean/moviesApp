@@ -96,7 +96,7 @@
                                             <outlet property="posterThumbnail" destination="VwW-vi-80e" id="uAG-CM-3HG"/>
                                             <outlet property="releaseYear" destination="UkA-yH-OOq" id="gjb-Wj-X9N"/>
                                             <outlet property="starIcon" destination="K80-hd-kxE" id="sOX-lk-d3f"/>
-                                            <segue destination="bIH-iJ-ZLo" kind="show" id="2Ad-Ow-XeX"/>
+                                            <segue destination="bIH-iJ-ZLo" kind="show" identifier="detailsSegue" id="lkR-dv-jAu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

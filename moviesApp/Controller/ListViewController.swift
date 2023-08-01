@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class ListViewController: UIViewController {
-    
+
     @IBOutlet var tableView: UITableView!
-    
+
     //Mock data
     let movies = ["Top Gun", "Blade Runner", "Titanic"]
     let ratings = ["9.5", "8.3", "6.9"]
@@ -21,18 +22,23 @@ class ListViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        
+
     }
-    
+
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return true
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("test")
-        //TODO: get stuff from sender and set here
-        //TODO: implement networking layer (Alamofire, SDWebImage)
-        //TODO: Add SwiftLint
+        if segue.identifier == "detailsSegue" {
+            let detailsVC = segue.destination as? DetailsViewController
+            detailsVC?.coverPhotoImage = UIImage(named: "defaultCover")!
+            // How do I know what cell has been clicked?
+        }
+
+        // TODO: get stuff from sender and set here
+        // TODO: implement networking layer (Alamofire, SDWebImage)
+        // TODO: Add SwiftLint - Done
     }
 }
 
